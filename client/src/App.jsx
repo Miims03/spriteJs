@@ -6,7 +6,7 @@ function App() {
 
 
   return (
-    <main className='h-screen w-screen flex flex-col justify-start items-center'>
+    <main className='h-screen w-screen flex flex-col justify-start items-center bg-stone-800'>
       <NavBar/>
       <ChoiceChamp />
     </main>

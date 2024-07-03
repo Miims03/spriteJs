@@ -1,15 +1,15 @@
 import React from 'react'
 import { SpriteAnimator } from 'react-sprite-animator'
-
-export default function Calavera({img}) {
+import oth from '../assets/purpleMan.png'
+export default function Calavera() {
 
     const name = 'calavera'
 
   return (
         <SpriteAnimator
-        sprite={img}
-        width={80}
-        height={50}
+        sprite={oth}
+        width={140}
+        height={80}
         scale={0.3}
         shouldAnimate={true}
         frameCount={9}
