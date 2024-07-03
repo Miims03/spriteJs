@@ -1,14 +1,16 @@
 import { useState } from 'react'
 import NavBar from './components/NavBar'
 import ChoiceChamp from './pages/ChoiceChamp'
+import Tesst from './pages/test'
 function App() {
 
 
 
   return (
-    <main className='h-screen w-screen flex flex-col justify-start items-center bg-stone-800'>
+    <main className='min-h-screen w-screen flex flex-col justify-start items-center bg-stone-800'>
       <NavBar/>
       <ChoiceChamp />
+      {/* <Tesst /> */}
     </main>
   )
 }

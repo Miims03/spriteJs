@@ -7,7 +7,9 @@ class ChampModel {
             name: "VARCHAR(20) NOT NULL UNIQUE",
             subname: "VARCHAR(200) NOT NULL UNIQUE",
             description:'TEXT',
-            img: `TEXT NOT NULL UNIQUE`
+            img: `TEXT NOT NULL UNIQUE`,
+            width: 'INT NOT NULL',
+            frames: 'INT NOT NULL'
         }
     }
     static get tableName() {
@@ -52,31 +54,31 @@ class ChampModel {
             });
         });
     }
-    // static async findOneById (id) {
-    //     return new Promise((resolve, reject) => {
-    //         const query = `SELECT * FROM ${this.tableName} WHERE id = '${id}'`;
-    //         db.query(query, [id], (err, rows) => {
-    //             if (err) {
-    //                 reject(err);
-    //             } else {
-    //                 resolve(rows[0]);
-    //             }
-    //         });
-    //     });
-    // }
+    static async findOneById (id) {
+        return new Promise((resolve, reject) => {
+            const query = `SELECT * FROM ${this.tableName} WHERE id = '${id}'`;
+            db.query(query, [id], (err, rows) => {
+                if (err) {
+                    reject(err);
+                } else {
+                    resolve(rows[0]);
+                }
+            });
+        });
+    }
 
-    // static async findAll () {
-    //     return new Promise((resolve, reject) => {
-    //         const query = `SELECT * FROM ${this.tableName}`;
-    //         db.query(query, (err, rows) => {
-    //             if (err) {
-    //                 reject(err);
-    //             } else {
-    //                 resolve(rows);
-    //             }
-    //         });
-    //     });
-    // }
+    static async findAll () {
+        return new Promise((resolve, reject) => {
+            const query = `SELECT * FROM ${this.tableName}`;
+            db.query(query, (err, rows) => {
+                if (err) {
+                    reject(err);
+                } else {
+                    resolve(rows);
+                }
+            });
+        });
+    }
 }
 
 module.exports = ChampModel

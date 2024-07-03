@@ -1,13 +1,12 @@
 import React from 'react'
-import Calavera from '../components/Calavera'
+import Champ from '../components/Champ'
 
-import '../components/Calavera.jsx'
 export default function () {
   return (
-    <div className=''>
+    <div className='w-full'>
         <div className='flex flex-col justify-center items-center'>
             <h1>{name}</h1>
-            <Calavera />
+            <Champ />
         </div>
         
     </div>
