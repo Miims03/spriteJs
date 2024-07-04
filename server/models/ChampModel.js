@@ -9,7 +9,8 @@ class ChampModel {
             description:'TEXT',
             img: `TEXT NOT NULL UNIQUE`,
             width: 'INT NOT NULL',
-            frames: 'INT NOT NULL'
+            frames: 'INT NOT NULL',
+            scale: 'FLOAT NOT NULL'
         }
     }
     static get tableName() {
