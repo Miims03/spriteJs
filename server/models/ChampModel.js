@@ -8,9 +8,15 @@ class ChampModel {
             subname: "VARCHAR(200) NOT NULL UNIQUE",
             description:'TEXT',
             img: `TEXT NOT NULL UNIQUE`,
+            imgatk: 'TEXT NOT NULL',
             width: 'INT NOT NULL',
+            widthatk: 'INT NOT NULL',
             frames: 'INT NOT NULL',
-            scale: 'FLOAT NOT NULL'
+            framesatk: 'INT NOT NULL',
+            scale: 'FLOAT NOT NULL',
+            fps: 'INT NOT NULL',
+            fpsatk: 'INT NOT NULL',
+            hpmax: 'INT NOT NULL'
         }
     }
     static get tableName() {
